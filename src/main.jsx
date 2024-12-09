@@ -11,8 +11,11 @@ import Write from "./routes/Write.jsx";
 import LoginPage from "./routes/LoginPage.jsx";
 import RegisterPage from './routes/RegisterPage.jsx';
 import SinglePostPage from "./routes/SinglePostPage.jsx";
+import MainLayout from './layouts/MainLayout.jsx';
 
 const router = createBrowserRouter([
+  {element: <MainLayout />,
+  children: [
   {
     path: '/',
     element: <Homepage />
@@ -39,7 +42,7 @@ const router = createBrowserRouter([
     path: "/register",
     element: <RegisterPage/>,
   },
-]);
+]}]);
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

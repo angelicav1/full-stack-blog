@@ -1,16 +1,17 @@
 import { useState } from "react";
 import { IKImage } from 'imagekitio-react';
 import Image from "./Image";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
   return (
     <div className='w-full h-16 md:h-20 flex items-center justify-between'>
       {/* LOGO */}
-      <div className='flex items-center gap-4 text-2xl font-bold'>
+      <Link to="/" className='flex items-center gap-4 text-2xl font-bold'>
         <Image src="logo.png" alt="Wild Byte Logo" w={32} h={32} />
         <span>Wild Byte</span>
-      </div>
+      </Link>
       {/* MOBILE MENU */}
       <div className='md:hidden'>
         {/* MOBILE BUTTON */}

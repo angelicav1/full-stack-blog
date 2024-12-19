@@ -8,3 +8,7 @@ body{
     overflow-x: hidden;
     font-family: "Oswald", sans-serif;
 }
+
+.animatedButton{
+    animation-duration: 10000ms;
+}
